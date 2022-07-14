@@ -19,6 +19,22 @@
 		FF4D4B6D2879F029006D8B97 /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B6C2879F029006D8B97 /* ScreenSizes.swift */; };
 		FF4D4B6F287A0011006D8B97 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B6E287A0011006D8B97 /* RegisterView.swift */; };
 		FF4D4B71287A0025006D8B97 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B70287A0025006D8B97 /* LoginView.swift */; };
+		FF4D4B74287DA72F006D8B97 /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B73287DA72F006D8B97 /* RegisterRequestModel.swift */; };
+		FF4D4B77287DE18F006D8B97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF4D4B76287DE18F006D8B97 /* Alamofire */; };
+		FF4D4B79287DE8B9006D8B97 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B78287DE8B9006D8B97 /* RegisterResponseModel.swift */; };
+		FF4D4B7B287DF5BF006D8B97 /* RegisterOTPResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B7A287DF5BF006D8B97 /* RegisterOTPResponseModel.swift */; };
+		FF4D4B8028802CEE006D8B97 /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B7F28802CEE006D8B97 /* LoginRequestModel.swift */; };
+		FF4D4B8228803DCF006D8B97 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8128803DCF006D8B97 /* LoginResponseModel.swift */; };
+		FF4D4B85288045D7006D8B97 /* SwitchRoleResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B84288045D7006D8B97 /* SwitchRoleResponseModel.swift */; };
+		FF4D4B87288045E5006D8B97 /* SwitchRoleRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B86288045E5006D8B97 /* SwitchRoleRequestModel.swift */; };
+		FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8828804A3E006D8B97 /* RefreshTokenHelper.swift */; };
+		FF4D4B8B28805996006D8B97 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8A28805996006D8B97 /* ForgotPasswordView.swift */; };
+		FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8D28807A9A006D8B97 /* ForgotPasswordRequestModel.swift */; };
+		FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8F28807AA6006D8B97 /* ForgotPasswordResponseModel.swift */; };
+		FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */; };
+		FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */; };
+		FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */; };
+		FF4D4B9C28808ACC006D8B97 /* TravellerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +71,21 @@
 		FF4D4B6C2879F029006D8B97 /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
 		FF4D4B6E287A0011006D8B97 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FF4D4B70287A0025006D8B97 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FF4D4B73287DA72F006D8B97 /* RegisterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
+		FF4D4B78287DE8B9006D8B97 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
+		FF4D4B7A287DF5BF006D8B97 /* RegisterOTPResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOTPResponseModel.swift; sourceTree = "<group>"; };
+		FF4D4B7F28802CEE006D8B97 /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		FF4D4B8128803DCF006D8B97 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		FF4D4B84288045D7006D8B97 /* SwitchRoleResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchRoleResponseModel.swift; sourceTree = "<group>"; };
+		FF4D4B86288045E5006D8B97 /* SwitchRoleRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchRoleRequestModel.swift; sourceTree = "<group>"; };
+		FF4D4B8828804A3E006D8B97 /* RefreshTokenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenHelper.swift; sourceTree = "<group>"; };
+		FF4D4B8A28805996006D8B97 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		FF4D4B8D28807A9A006D8B97 /* ForgotPasswordRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRequestModel.swift; sourceTree = "<group>"; };
+		FF4D4B8F28807AA6006D8B97 /* ForgotPasswordResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponseModel.swift; sourceTree = "<group>"; };
+		FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordOTPResponseModel.swift; sourceTree = "<group>"; };
+		FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderHomeView.swift; sourceTree = "<group>"; };
+		FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverHomeView.swift; sourceTree = "<group>"; };
+		FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4D4B77287DE18F006D8B97 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +186,10 @@
 		FF4D4B5E2879E77E006D8B97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FF4D4B6A2879ECB3006D8B97 /* LoginRegisterSelectionView.swift */,
-				FF4D4B6E287A0011006D8B97 /* RegisterView.swift */,
-				FF4D4B70287A0025006D8B97 /* LoginView.swift */,
+				FF4D4B93288089E1006D8B97 /* AuthViews */,
+				FF4D4B94288089F7006D8B97 /* SenderViews */,
+				FF4D4B9528808A0D006D8B97 /* ReceiverViews */,
+				FF4D4B9628808A4D006D8B97 /* TravellerViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +197,10 @@
 		FF4D4B5F2879E783006D8B97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FF4D4B72287DA438006D8B97 /* RegisterModel */,
+				FF4D4B7E28802CD5006D8B97 /* LoginModel */,
+				FF4D4B832880459B006D8B97 /* SwitchRoleModel */,
+				FF4D4B8C28807A7B006D8B97 /* ForgotPasswordModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +208,7 @@
 		FF4D4B602879E794006D8B97 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FF4D4B8828804A3E006D8B97 /* RefreshTokenHelper.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -192,6 +230,79 @@
 			path = URLs;
 			sourceTree = "<group>";
 		};
+		FF4D4B72287DA438006D8B97 /* RegisterModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B73287DA72F006D8B97 /* RegisterRequestModel.swift */,
+				FF4D4B78287DE8B9006D8B97 /* RegisterResponseModel.swift */,
+				FF4D4B7A287DF5BF006D8B97 /* RegisterOTPResponseModel.swift */,
+			);
+			path = RegisterModel;
+			sourceTree = "<group>";
+		};
+		FF4D4B7E28802CD5006D8B97 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B7F28802CEE006D8B97 /* LoginRequestModel.swift */,
+				FF4D4B8128803DCF006D8B97 /* LoginResponseModel.swift */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		FF4D4B832880459B006D8B97 /* SwitchRoleModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B86288045E5006D8B97 /* SwitchRoleRequestModel.swift */,
+				FF4D4B84288045D7006D8B97 /* SwitchRoleResponseModel.swift */,
+			);
+			path = SwitchRoleModel;
+			sourceTree = "<group>";
+		};
+		FF4D4B8C28807A7B006D8B97 /* ForgotPasswordModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B8D28807A9A006D8B97 /* ForgotPasswordRequestModel.swift */,
+				FF4D4B8F28807AA6006D8B97 /* ForgotPasswordResponseModel.swift */,
+				FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */,
+			);
+			path = ForgotPasswordModel;
+			sourceTree = "<group>";
+		};
+		FF4D4B93288089E1006D8B97 /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B6A2879ECB3006D8B97 /* LoginRegisterSelectionView.swift */,
+				FF4D4B6E287A0011006D8B97 /* RegisterView.swift */,
+				FF4D4B70287A0025006D8B97 /* LoginView.swift */,
+				FF4D4B8A28805996006D8B97 /* ForgotPasswordView.swift */,
+			);
+			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		FF4D4B94288089F7006D8B97 /* SenderViews */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */,
+			);
+			path = SenderViews;
+			sourceTree = "<group>";
+		};
+		FF4D4B9528808A0D006D8B97 /* ReceiverViews */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */,
+			);
+			path = ReceiverViews;
+			sourceTree = "<group>";
+		};
+		FF4D4B9628808A4D006D8B97 /* TravellerViews */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */,
+			);
+			path = TravellerViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +319,9 @@
 			dependencies = (
 			);
 			name = ShipX;
+			packageProductDependencies = (
+				FF4D4B76287DE18F006D8B97 /* Alamofire */,
+			);
 			productName = ShipX;
 			productReference = FF4D4B2E2879E513006D8B97 /* ShipX.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +394,9 @@
 				Base,
 			);
 			mainGroup = FF4D4B252879E513006D8B97;
+			packageReferences = (
+				FF4D4B75287DE18F006D8B97 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FF4D4B2F2879E513006D8B97 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,13 +439,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */,
+				FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */,
+				FF4D4B8228803DCF006D8B97 /* LoginResponseModel.swift in Sources */,
+				FF4D4B8B28805996006D8B97 /* ForgotPasswordView.swift in Sources */,
 				FF4D4B672879EBD6006D8B97 /* AppColors.swift in Sources */,
 				FF4D4B71287A0025006D8B97 /* LoginView.swift in Sources */,
+				FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */,
+				FF4D4B87288045E5006D8B97 /* SwitchRoleRequestModel.swift in Sources */,
+				FF4D4B79287DE8B9006D8B97 /* RegisterResponseModel.swift in Sources */,
+				FF4D4B9C28808ACC006D8B97 /* TravellerHomeView.swift in Sources */,
 				FF4D4B652879EB56006D8B97 /* URLs.swift in Sources */,
 				FF4D4B6D2879F029006D8B97 /* ScreenSizes.swift in Sources */,
+				FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */,
+				FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */,
+				FF4D4B7B287DF5BF006D8B97 /* RegisterOTPResponseModel.swift in Sources */,
+				FF4D4B74287DA72F006D8B97 /* RegisterRequestModel.swift in Sources */,
+				FF4D4B8028802CEE006D8B97 /* LoginRequestModel.swift in Sources */,
 				FF4D4B6F287A0011006D8B97 /* RegisterView.swift in Sources */,
+				FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */,
 				FF4D4B322879E514006D8B97 /* ShipXApp.swift in Sources */,
 				FF4D4B6B2879ECB3006D8B97 /* LoginRegisterSelectionView.swift in Sources */,
+				FF4D4B85288045D7006D8B97 /* SwitchRoleResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +793,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF4D4B75287DE18F006D8B97 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF4D4B76287DE18F006D8B97 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF4D4B75287DE18F006D8B97 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF4D4B262879E513006D8B97 /* Project object */;
 }

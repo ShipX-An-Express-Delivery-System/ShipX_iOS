@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 class registerFormViewModel: ObservableObject {
     @Published var userName = String()
@@ -27,6 +28,10 @@ struct RegisterView: View {
     }
     
     @ObservedObject private var registerFromModel = registerFormViewModel()
+    
+    @State private var showingAlert = false
+    @State private var responseMessage = String()
+    @State private var alertTitle = String()
     
     var body: some View {
         
@@ -76,6 +81,7 @@ struct RegisterView: View {
                             Button {
                                 // action
                                 print("Get OTP button pressed")
+                                postRegisterOTPRequest()
                             } label: {
                                 Text("Get OTP")
                                     .font(.system(size: 16, weight: .regular, design: .rounded))
@@ -92,10 +98,9 @@ struct RegisterView: View {
                     Button {
                         // action
                         print("Register button pressed")
-                        print(registerFromModel.isNID)
-                        print(registerFromModel.BIDOrNID)
+                        postRegisterRequest()
                     } label: {
-                        Text("REGISTER")
+                        Text("Register")
                             .font(.system(size: 16, weight: .regular, design: .rounded))
                             .foregroundColor(.white)
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 50, maxHeight: 50, alignment: .center)
@@ -106,9 +111,67 @@ struct RegisterView: View {
                 } //: form
                 .background(Color.customBackground)
             } //: vstack
-        }
-        .navigationTitle("REGISTER")
+        } //: zstact
+        .navigationTitle("Register")
         .navigationBarTitleDisplayMode(.inline)
+        .alert(self.alertTitle, isPresented: $showingAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(responseMessage)
+        }
+    }
+    
+    // post register OTP request
+    func postRegisterOTPRequest() {
+        
+        guard let registerOTPURL = URL(string: String.registerOTPURL()) else {
+            print("Register OTP URL Invalid")
+            return
+        }
+        
+        let parameters = ["email": registerFromModel.email]
+        
+        let request = AF.request(registerOTPURL, method: .post, parameters: parameters, encoder: .json)
+        
+        request.responseDecodable(of: RegisterOTPResponseModel.self) { data in
+            if data.value?.success == false {
+                self.alertTitle = "Server Request Error!"
+                self.responseMessage = data.value?.error ?? data.value?.status ?? "Unknown Error"
+                self.showingAlert = true
+            }
+            else {
+                self.alertTitle = "Success!"
+                self.responseMessage = data.value?.status ?? "OTP Sent Successfully."
+                self.showingAlert = true
+            }
+        }
+    }
+
+    
+    // post register data API request
+    func postRegisterRequest() {
+        
+        guard let registerURL = URL(string: String.registerURL()) else {
+            print("Register URL Invalid")
+            return
+        }
+        
+        let parameters = RegisterRequestModel(name: registerFromModel.userName, email: registerFromModel.email, phone: registerFromModel.phone, password: registerFromModel.password, confirmPassword: registerFromModel.confirmPassword, registerOTP: registerFromModel.registerOTP, govtIssuedID: GovtIssuedID(number: registerFromModel.BIDOrNID, isNID: registerFromModel.isNID))
+        
+        let request = AF.request(registerURL, method: .post, parameters: parameters, encoder: .json)
+        
+        request.responseDecodable(of: RegisterResponseModel.self) { data in
+            if data.value?.success == false {
+                self.alertTitle = "Server Request Error!"
+                self.responseMessage = data.value?.error ?? data.value?.status ?? "Unknown Error"
+                self.showingAlert = true
+            }
+            else {
+                self.alertTitle = "Success!"
+                self.responseMessage = data.value?.status ?? "Account Created Successfully."
+                self.showingAlert = true
+            }
+        }
     }
 }
 

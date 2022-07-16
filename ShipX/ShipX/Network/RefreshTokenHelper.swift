@@ -21,7 +21,7 @@ struct RefreshTokenRequestModel: Codable {
 }
 
 // refresh token
-public func refreshTokenRequest() {
+public func refreshTokenRequest(completion: @escaping () -> ()) {
     
     guard let refreshTokenURL = URL(string: String.refreshTokenURL()) else {
         print("Refresh token URL Invalid")
@@ -36,6 +36,7 @@ public func refreshTokenRequest() {
         if data.value?.success == true {
             UserDefaults.standard.set(data.value?.accessToken, forKey: "accessToken")
             print("Refeshed Token")
+            completion()
         }
         else {
             print("Refreshing Token Failed!")

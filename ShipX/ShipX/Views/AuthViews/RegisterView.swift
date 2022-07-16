@@ -8,7 +8,7 @@
 import SwiftUI
 import Alamofire
 
-class registerFormViewModel: ObservableObject {
+class RegisterFormViewModel: ObservableObject {
     @Published var userName = String()
     @Published var phone = String()
     @Published var email = String()
@@ -27,7 +27,7 @@ struct RegisterView: View {
         UITableView.appearance().showsVerticalScrollIndicator = false
     }
     
-    @ObservedObject private var registerFromModel = registerFormViewModel()
+    @ObservedObject private var registerFromModel = RegisterFormViewModel()
     
     @State private var showingAlert = false
     @State private var responseMessage = String()

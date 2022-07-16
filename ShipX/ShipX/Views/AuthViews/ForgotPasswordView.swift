@@ -8,7 +8,7 @@
 import SwiftUI
 import Alamofire
 
-class forgotPasswordFormViewModel: ObservableObject {
+class ForgotPasswordFormViewModel: ObservableObject {
     @Published var email = String()
     @Published var newPassword = String()
     @Published var newConfirmPassword = String()
@@ -17,7 +17,7 @@ class forgotPasswordFormViewModel: ObservableObject {
 
 struct ForgotPasswordView: View {
     
-    @ObservedObject private var forgotPasswordFromModel = forgotPasswordFormViewModel()
+    @ObservedObject private var forgotPasswordFromModel = ForgotPasswordFormViewModel()
     
     @State private var showingAlert = false
     @State private var responseMessage = String()

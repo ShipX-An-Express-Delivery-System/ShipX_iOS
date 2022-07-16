@@ -9,7 +9,14 @@ import SwiftUI
 
 struct SenderHomeView: View {
     var body: some View {
-        Text("Sender Home View")
+        ZStack {
+            Text("Sender Home View")
+        }
+        .onAppear {
+            refreshTokenRequest(completion: {
+                print(UserDefaults.standard.string(forKey: "accessToken")!)
+            })
+        }
     }
 }
 

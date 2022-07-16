@@ -8,7 +8,7 @@
 import SwiftUI
 import Alamofire
 
-class loginFormViewModel: ObservableObject {
+class LoginFormViewModel: ObservableObject {
     @Published var email = String()
     @Published var password = String()
     @Published var role = "sender"
@@ -23,7 +23,7 @@ struct LoginView: View {
     
     @AppStorage("isLoggedIn") var isLoggedIn: Bool?
     
-    @ObservedObject private var loginFromModel = loginFormViewModel()
+    @ObservedObject private var loginFromModel = LoginFormViewModel()
     
     @State private var showingAlert = false
     @State private var responseMessage = String()

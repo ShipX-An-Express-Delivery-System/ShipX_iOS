@@ -66,4 +66,14 @@ extension String {
     static func cityCorpURL() -> String {
         return baseURLString + "cityCorpAreas?area="
     }
+    
+    // traveller travel post
+    static func travellerShippingRequestURL() -> String {
+        return baseURLString + "travellerShippingRequest"
+    }
+    
+    // shipping process data
+    static func shippingProcessDataURL() -> String {
+        return baseURLString + "shippingProcessData?email="
+    }
 }

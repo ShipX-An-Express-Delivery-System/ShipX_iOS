@@ -39,6 +39,12 @@
 		FF4D4BA12881BAF8006D8B97 /* LocationSearchViewFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA02881BAF8006D8B97 /* LocationSearchViewFrom.swift */; };
 		FF4D4BA428820030006D8B97 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA328820030006D8B97 /* LocationModel.swift */; };
 		FF4D4BA62882955B006D8B97 /* LocationSearchViewTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA52882955B006D8B97 /* LocationSearchViewTo.swift */; };
+		FF4D4BA92882B561006D8B97 /* TravellerTravelRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA82882B561006D8B97 /* TravellerTravelRequestModel.swift */; };
+		FF4D4BAB2882B5A5006D8B97 /* TravellerTravelResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BAA2882B5A5006D8B97 /* TravellerTravelResponseModel.swift */; };
+		FF9AF562288324480094541B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF561288324480094541B /* Extensions.swift */; };
+		FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF5662883F8020094541B /* ShippingProcessResponseModel.swift */; };
+		FF9AF5692883F8C50094541B /* TravellerRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF5682883F8C50094541B /* TravellerRequestsView.swift */; };
+		FF9AF56B288418FE0094541B /* ShippingProcessDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF56A288418FE0094541B /* ShippingProcessDataRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +100,12 @@
 		FF4D4BA02881BAF8006D8B97 /* LocationSearchViewFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewFrom.swift; sourceTree = "<group>"; };
 		FF4D4BA328820030006D8B97 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		FF4D4BA52882955B006D8B97 /* LocationSearchViewTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewTo.swift; sourceTree = "<group>"; };
+		FF4D4BA82882B561006D8B97 /* TravellerTravelRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTravelRequestModel.swift; sourceTree = "<group>"; };
+		FF4D4BAA2882B5A5006D8B97 /* TravellerTravelResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTravelResponseModel.swift; sourceTree = "<group>"; };
+		FF9AF561288324480094541B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FF9AF5662883F8020094541B /* ShippingProcessResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingProcessResponseModel.swift; sourceTree = "<group>"; };
+		FF9AF5682883F8C50094541B /* TravellerRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerRequestsView.swift; sourceTree = "<group>"; };
+		FF9AF56A288418FE0094541B /* ShippingProcessDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingProcessDataRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +223,8 @@
 				FF4D4B832880459B006D8B97 /* SwitchRoleModel */,
 				FF4D4B8C28807A7B006D8B97 /* ForgotPasswordModel */,
 				FF4D4BA228820014006D8B97 /* Location Model */,
+				FF4D4BA72882B54D006D8B97 /* TravellerModel */,
+				FF9AF5632883F7C20094541B /* ShippingProcessModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				FF4D4B8828804A3E006D8B97 /* RefreshTokenHelper.swift */,
+				FF9AF56A288418FE0094541B /* ShippingProcessDataRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 			children = (
 				FF4D4B662879EBD6006D8B97 /* AppColors.swift */,
 				FF4D4B6C2879F029006D8B97 /* ScreenSizes.swift */,
+				FF9AF561288324480094541B /* Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -310,6 +326,7 @@
 			children = (
 				FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */,
 				FF4D4B9D2881A694006D8B97 /* TravellerTravelView.swift */,
+				FF9AF5682883F8C50094541B /* TravellerRequestsView.swift */,
 			);
 			path = TravellerViews;
 			sourceTree = "<group>";
@@ -329,6 +346,23 @@
 				FF4D4BA328820030006D8B97 /* LocationModel.swift */,
 			);
 			path = "Location Model";
+			sourceTree = "<group>";
+		};
+		FF4D4BA72882B54D006D8B97 /* TravellerModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF4D4BA82882B561006D8B97 /* TravellerTravelRequestModel.swift */,
+				FF4D4BAA2882B5A5006D8B97 /* TravellerTravelResponseModel.swift */,
+			);
+			path = TravellerModel;
+			sourceTree = "<group>";
+		};
+		FF9AF5632883F7C20094541B /* ShippingProcessModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF9AF5662883F8020094541B /* ShippingProcessResponseModel.swift */,
+			);
+			path = ShippingProcessModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,11 +503,15 @@
 			files = (
 				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */,
 				FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */,
+				FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */,
 				FF4D4B8228803DCF006D8B97 /* LoginResponseModel.swift in Sources */,
 				FF4D4B8B28805996006D8B97 /* ForgotPasswordView.swift in Sources */,
+				FF4D4BAB2882B5A5006D8B97 /* TravellerTravelResponseModel.swift in Sources */,
 				FF4D4B672879EBD6006D8B97 /* AppColors.swift in Sources */,
 				FF4D4B71287A0025006D8B97 /* LoginView.swift in Sources */,
+				FF9AF562288324480094541B /* Extensions.swift in Sources */,
 				FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */,
+				FF4D4BA92882B561006D8B97 /* TravellerTravelRequestModel.swift in Sources */,
 				FF4D4B87288045E5006D8B97 /* SwitchRoleRequestModel.swift in Sources */,
 				FF4D4B79287DE8B9006D8B97 /* RegisterResponseModel.swift in Sources */,
 				FF4D4B9C28808ACC006D8B97 /* TravellerHomeView.swift in Sources */,
@@ -484,6 +522,7 @@
 				FF4D4B9E2881A694006D8B97 /* TravellerTravelView.swift in Sources */,
 				FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */,
 				FF4D4BA62882955B006D8B97 /* LocationSearchViewTo.swift in Sources */,
+				FF9AF56B288418FE0094541B /* ShippingProcessDataRequest.swift in Sources */,
 				FF4D4B7B287DF5BF006D8B97 /* RegisterOTPResponseModel.swift in Sources */,
 				FF4D4B74287DA72F006D8B97 /* RegisterRequestModel.swift in Sources */,
 				FF4D4BA428820030006D8B97 /* LocationModel.swift in Sources */,
@@ -492,6 +531,7 @@
 				FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */,
 				FF4D4B322879E514006D8B97 /* ShipXApp.swift in Sources */,
 				FF4D4B6B2879ECB3006D8B97 /* LoginRegisterSelectionView.swift in Sources */,
+				FF9AF5692883F8C50094541B /* TravellerRequestsView.swift in Sources */,
 				FF4D4B85288045D7006D8B97 /* SwitchRoleResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

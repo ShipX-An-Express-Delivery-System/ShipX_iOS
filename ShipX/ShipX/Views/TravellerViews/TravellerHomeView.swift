@@ -26,8 +26,7 @@ struct TravellerHomeView: View {
                 .onTapGesture {
                     selectedTab = "travel"
                 }
-                
-                Text("Requests")
+                TravellerRequestsView()
                     .tabItem {
                         Label("Requests", systemImage: "person.crop.rectangle.stack")
                     }
@@ -52,12 +51,6 @@ struct TravellerHomeView: View {
                     }
             }
             .accentColor(.customRed)
-            //        .onAppear {
-            //            refreshTokenRequest(completion: {
-            //                print(UserDefaults.standard.string(forKey: "accessToken")!)
-            //            })
-            //        }
-
         } //: navigation view
     } //: view
 }

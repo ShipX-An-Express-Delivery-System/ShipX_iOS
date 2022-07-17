@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 class TravellerTravelFormViewModel: ObservableObject {
 
@@ -338,7 +339,7 @@ struct TravellerTravelView: View {
                     
                     // hstack
                     HStack {
-                        TextField("Additional Note: ", text: $travellerTravelFormModel.additionalNoteFrom)
+                        TextField("Additional Note: ", text: $travellerTravelFormModel.additionalNoteTo)
                             .padding()
                     } //: hstack
                 } //: group
@@ -366,7 +367,7 @@ struct TravellerTravelView: View {
             Button {
                 // action
                 print("Post Button Pressed")
-                print(travellerTravelFormModel.travellingTimeAndDate)
+                postTravellerTravelRequest()
             } label: {
                 Text("Post")
                     .font(.system(size: 16, weight: .regular, design: .rounded))
@@ -384,6 +385,36 @@ struct TravellerTravelView: View {
             Text(responseMessage)
         }
     } //: view
+    
+    // post traveller travel post API request
+    func postTravellerTravelRequest() {
+        
+        guard let travellerTravelURL = URL(string: String.travellerShippingRequestURL()) else {
+            print("Traveller Travel URL Invalid")
+            return
+        }
+        
+        let parameters = TravellerTravelRequestModel(travellingTimeAndDate: Date().dateToString(fromDate: travellerTravelFormModel.travellingTimeAndDate),
+                                                     isTravellerAvailable: true,
+                                                     travellerLocationFrom: TravellerLocation(division: travellerTravelFormModel.divisionFrom, district: travellerTravelFormModel.districtFrom, upazila: travellerTravelFormModel.upazilaFrom, cityCorpArea: travellerTravelFormModel.cityCorpAreaFrom, additionalLocationNote: travellerTravelFormModel.additionalNoteFrom), travellerLocationTo: TravellerLocation(division: travellerTravelFormModel.divisionTo, district: travellerTravelFormModel.districtTo, upazila: travellerTravelFormModel.upazilaTo, cityCorpArea: travellerTravelFormModel.cityCorpAreaTo, additionalLocationNote: travellerTravelFormModel.additionalNoteTo))
+        
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(UserDefaults.standard.string(forKey: "accessToken") ?? "")", "Content-Type": "application/json"]
+        
+        let request = AF.request(travellerTravelURL, method: .post, parameters: parameters, encoder: .json, headers: headers)
+        
+        request.responseDecodable(of: TravellerTravelResponseModel.self) { data in
+            if data.value?.success == false {
+                self.alertTitle = "Server Request Error!"
+                self.responseMessage = data.value?.status ?? "Unknown Error"
+                self.showingAlert = true
+            }
+            else {
+                self.alertTitle = "Success!"
+                self.responseMessage = data.value?.status ?? "Travelling request placed successfully"
+                self.showingAlert = true
+            }
+        }
+    }
 }
 
 

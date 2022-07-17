@@ -32,14 +32,6 @@ struct LocationSearchViewFrom: View {
                     
                     self.travellerTravelFormModel.cityCorpAreaFrom = location.cityCorpAreaName ?? self.travellerTravelFormModel.cityCorpAreaFrom
                     
-//                    self.travellerTravelFormModel.divisionTo = location.divisionName ?? self.travellerTravelFormModel.divisionTo
-//
-//                    self.travellerTravelFormModel.districtTo = location.districtName ?? self.travellerTravelFormModel.districtTo
-//
-//                    self.travellerTravelFormModel.upazilaTo = location.upazilaName ?? self.travellerTravelFormModel.upazilaTo
-//
-//                    self.travellerTravelFormModel.cityCorpAreaTo = location.cityCorpAreaName ?? self.travellerTravelFormModel.cityCorpAreaTo
-                    
                 } label: {
                     Text((location.divisionName ?? location.districtName ?? location.upazilaName ?? location.cityCorpAreaName) ?? "")
                         .padding()
@@ -57,6 +49,7 @@ struct LocationSearchViewFrom: View {
     
     // get location data API request
     func getLocationRequest() {
+        
         guard let locationURL = URL(string: searchURL + queryForSearchURL) else {
             print("location URL Invalid")
             return

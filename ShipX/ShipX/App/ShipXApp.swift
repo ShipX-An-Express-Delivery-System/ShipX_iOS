@@ -20,12 +20,27 @@ struct ShipXApp: App {
             else {
                 if UserDefaults.standard.string(forKey: "role") == "sender" {
                     SenderHomeView()
+                        .onAppear {
+                            refreshTokenRequest(completion: {
+                                print(UserDefaults.standard.string(forKey: "accessToken")!)
+                            })
+                        }
                 }
                 if UserDefaults.standard.string(forKey: "role") == "receiver" {
                     ReceiverHomeView()
+                        .onAppear {
+                            refreshTokenRequest(completion: {
+                                print(UserDefaults.standard.string(forKey: "accessToken")!)
+                            })
+                        }
                 }
                 if UserDefaults.standard.string(forKey: "role") == "traveller" {
                     TravellerHomeView()
+                        .onAppear {
+                            refreshTokenRequest(completion: {
+                                print(UserDefaults.standard.string(forKey: "accessToken")!)
+                            })
+                        }
                 }
             }
         }

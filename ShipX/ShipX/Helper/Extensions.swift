@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Date {
     
@@ -43,4 +44,11 @@ extension Date {
 //
 //        return dayTimePeriodFormatter.string(from: date as Date)
 //    }
+}
+
+
+extension View {
+    func hidden(_ shouldHide: Bool) -> some View {
+        opacity(shouldHide ? 0 : 1)
+    }
 }

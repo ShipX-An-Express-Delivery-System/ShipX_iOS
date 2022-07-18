@@ -1,5 +1,5 @@
 //
-//  TravellerHomeView.swift
+//  TravellerHomeTabView.swift
 //  ShipX
 //
 //  Created by Fahim Rahman on 14/7/22.
@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct TravellerHomeView: View {
+struct TravellerHomeTabView: View {
     
-    @State private var selectedTab = "travel"
+    @State private var selectedTab = 1
     
     // view
     var body: some View {
         // navigation view
         NavigationView {
+            // tab view
             TabView(selection: $selectedTab) {
                 ScrollView(showsIndicators: false) {
                     TravellerTravelView()
@@ -23,33 +24,23 @@ struct TravellerHomeView: View {
                 .tabItem {
                     Label("Travel", systemImage: "bus")
                 }
-                .onTapGesture {
-                    selectedTab = "travel"
-                }
+                .tag(1)
                 TravellerRequestsView()
                     .tabItem {
                         Label("Requests", systemImage: "person.crop.rectangle.stack")
                     }
-                    .onTapGesture {
-                        selectedTab = "requests"
-                    }
-                
-                Text("Details")
+                    .tag(2)
+                TravellerDetailsView()
                     .tabItem {
                         Label("Details", systemImage: "newspaper")
                     }
-                    .onTapGesture {
-                        selectedTab = "details"
-                    }
-                
+                    .tag(3)
                 Text("Profile")
                     .tabItem {
                         Label("Profile", systemImage: "person.fill")
                     }
-                    .onTapGesture {
-                        selectedTab = "profile"
-                    }
-            }
+                    .tag(4)
+            } // tab view
             .accentColor(.customRed)
         } //: navigation view
     } //: view
@@ -58,6 +49,6 @@ struct TravellerHomeView: View {
 
 struct TravellerHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        TravellerHomeView()
+        TravellerHomeTabView()
     }
 }

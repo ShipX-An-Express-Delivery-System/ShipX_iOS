@@ -35,7 +35,7 @@ struct ShipXApp: App {
                         }
                 }
                 if UserDefaults.standard.string(forKey: "role") == "traveller" {
-                    TravellerHomeView()
+                    TravellerHomeTabView()
                         .onAppear {
                             refreshTokenRequest(completion: {
                                 print(UserDefaults.standard.string(forKey: "accessToken")!)

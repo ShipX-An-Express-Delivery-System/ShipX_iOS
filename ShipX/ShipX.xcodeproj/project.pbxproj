@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF19ACB72884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACB62884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift */; };
+		FF19ACB92884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACB82884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift */; };
+		FF19ACBF2885478D00D37011 /* TravellerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACBE2885478D00D37011 /* TravellerDetailsView.swift */; };
+		FF19ACC228859CD800D37011 /* ProfileDataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACC128859CD800D37011 /* ProfileDataResponseModel.swift */; };
+		FF19ACC42885F7FB00D37011 /* ConfirmationOTPResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACC32885F7FB00D37011 /* ConfirmationOTPResponseModel.swift */; };
+		FF19ACC9288606FD00D37011 /* DeliveredRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACC8288606FD00D37011 /* DeliveredRequestModel.swift */; };
 		FF4D4B322879E514006D8B97 /* ShipXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B312879E514006D8B97 /* ShipXApp.swift */; };
 		FF4D4B362879E517006D8B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4D4B352879E517006D8B97 /* Assets.xcassets */; };
 		FF4D4B392879E517006D8B97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4D4B382879E517006D8B97 /* Preview Assets.xcassets */; };
@@ -34,7 +40,7 @@
 		FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */; };
 		FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */; };
 		FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */; };
-		FF4D4B9C28808ACC006D8B97 /* TravellerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */; };
+		FF4D4B9C28808ACC006D8B97 /* TravellerHomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9B28808ACC006D8B97 /* TravellerHomeTabView.swift */; };
 		FF4D4B9E2881A694006D8B97 /* TravellerTravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9D2881A694006D8B97 /* TravellerTravelView.swift */; };
 		FF4D4BA12881BAF8006D8B97 /* LocationSearchViewFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA02881BAF8006D8B97 /* LocationSearchViewFrom.swift */; };
 		FF4D4BA428820030006D8B97 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA328820030006D8B97 /* LocationModel.swift */; };
@@ -65,6 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF19ACB62884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerAcceptRejectRequestModel.swift; sourceTree = "<group>"; };
+		FF19ACB82884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerAcceptRejectResponseModel.swift; sourceTree = "<group>"; };
+		FF19ACBE2885478D00D37011 /* TravellerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerDetailsView.swift; sourceTree = "<group>"; };
+		FF19ACC128859CD800D37011 /* ProfileDataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataResponseModel.swift; sourceTree = "<group>"; };
+		FF19ACC32885F7FB00D37011 /* ConfirmationOTPResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationOTPResponseModel.swift; sourceTree = "<group>"; };
+		FF19ACC8288606FD00D37011 /* DeliveredRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveredRequestModel.swift; sourceTree = "<group>"; };
 		FF4D4B2E2879E513006D8B97 /* ShipX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4D4B312879E514006D8B97 /* ShipXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipXApp.swift; sourceTree = "<group>"; };
 		FF4D4B352879E517006D8B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +107,7 @@
 		FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordOTPResponseModel.swift; sourceTree = "<group>"; };
 		FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderHomeView.swift; sourceTree = "<group>"; };
 		FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverHomeView.swift; sourceTree = "<group>"; };
-		FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerHomeView.swift; sourceTree = "<group>"; };
+		FF4D4B9B28808ACC006D8B97 /* TravellerHomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerHomeTabView.swift; sourceTree = "<group>"; };
 		FF4D4B9D2881A694006D8B97 /* TravellerTravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTravelView.swift; sourceTree = "<group>"; };
 		FF4D4BA02881BAF8006D8B97 /* LocationSearchViewFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewFrom.swift; sourceTree = "<group>"; };
 		FF4D4BA328820030006D8B97 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -134,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF19ACC028859CC600D37011 /* ProfileDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF19ACC128859CD800D37011 /* ProfileDataResponseModel.swift */,
+			);
+			path = ProfileDataModel;
+			sourceTree = "<group>";
+		};
 		FF4D4B252879E513006D8B97 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +238,7 @@
 		FF4D4B5F2879E783006D8B97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FF19ACC028859CC600D37011 /* ProfileDataModel */,
 				FF4D4B72287DA438006D8B97 /* RegisterModel */,
 				FF4D4B7E28802CD5006D8B97 /* LoginModel */,
 				FF4D4B832880459B006D8B97 /* SwitchRoleModel */,
@@ -324,9 +345,10 @@
 		FF4D4B9628808A4D006D8B97 /* TravellerViews */ = {
 			isa = PBXGroup;
 			children = (
-				FF4D4B9B28808ACC006D8B97 /* TravellerHomeView.swift */,
+				FF4D4B9B28808ACC006D8B97 /* TravellerHomeTabView.swift */,
 				FF4D4B9D2881A694006D8B97 /* TravellerTravelView.swift */,
 				FF9AF5682883F8C50094541B /* TravellerRequestsView.swift */,
+				FF19ACBE2885478D00D37011 /* TravellerDetailsView.swift */,
 			);
 			path = TravellerViews;
 			sourceTree = "<group>";
@@ -353,6 +375,10 @@
 			children = (
 				FF4D4BA82882B561006D8B97 /* TravellerTravelRequestModel.swift */,
 				FF4D4BAA2882B5A5006D8B97 /* TravellerTravelResponseModel.swift */,
+				FF19ACB62884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift */,
+				FF19ACB82884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift */,
+				FF19ACC32885F7FB00D37011 /* ConfirmationOTPResponseModel.swift */,
+				FF19ACC8288606FD00D37011 /* DeliveredRequestModel.swift */,
 			);
 			path = TravellerModel;
 			sourceTree = "<group>";
@@ -504,28 +530,34 @@
 				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */,
 				FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */,
 				FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */,
+				FF19ACC42885F7FB00D37011 /* ConfirmationOTPResponseModel.swift in Sources */,
 				FF4D4B8228803DCF006D8B97 /* LoginResponseModel.swift in Sources */,
+				FF19ACBF2885478D00D37011 /* TravellerDetailsView.swift in Sources */,
 				FF4D4B8B28805996006D8B97 /* ForgotPasswordView.swift in Sources */,
 				FF4D4BAB2882B5A5006D8B97 /* TravellerTravelResponseModel.swift in Sources */,
 				FF4D4B672879EBD6006D8B97 /* AppColors.swift in Sources */,
 				FF4D4B71287A0025006D8B97 /* LoginView.swift in Sources */,
+				FF19ACC228859CD800D37011 /* ProfileDataResponseModel.swift in Sources */,
 				FF9AF562288324480094541B /* Extensions.swift in Sources */,
+				FF19ACB72884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift in Sources */,
 				FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */,
 				FF4D4BA92882B561006D8B97 /* TravellerTravelRequestModel.swift in Sources */,
 				FF4D4B87288045E5006D8B97 /* SwitchRoleRequestModel.swift in Sources */,
 				FF4D4B79287DE8B9006D8B97 /* RegisterResponseModel.swift in Sources */,
-				FF4D4B9C28808ACC006D8B97 /* TravellerHomeView.swift in Sources */,
+				FF4D4B9C28808ACC006D8B97 /* TravellerHomeTabView.swift in Sources */,
 				FF4D4B652879EB56006D8B97 /* URLs.swift in Sources */,
 				FF4D4B6D2879F029006D8B97 /* ScreenSizes.swift in Sources */,
 				FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */,
 				FF4D4BA12881BAF8006D8B97 /* LocationSearchViewFrom.swift in Sources */,
 				FF4D4B9E2881A694006D8B97 /* TravellerTravelView.swift in Sources */,
+				FF19ACB92884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift in Sources */,
 				FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */,
 				FF4D4BA62882955B006D8B97 /* LocationSearchViewTo.swift in Sources */,
 				FF9AF56B288418FE0094541B /* ShippingProcessDataRequest.swift in Sources */,
 				FF4D4B7B287DF5BF006D8B97 /* RegisterOTPResponseModel.swift in Sources */,
 				FF4D4B74287DA72F006D8B97 /* RegisterRequestModel.swift in Sources */,
 				FF4D4BA428820030006D8B97 /* LocationModel.swift in Sources */,
+				FF19ACC9288606FD00D37011 /* DeliveredRequestModel.swift in Sources */,
 				FF4D4B8028802CEE006D8B97 /* LoginRequestModel.swift in Sources */,
 				FF4D4B6F287A0011006D8B97 /* RegisterView.swift in Sources */,
 				FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */,

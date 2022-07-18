@@ -39,7 +39,7 @@ struct LocationSearchViewFrom: View {
             }
         }
         .navigationTitle(navigationTitle)
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarTitleDisplayMode(.inline)
         .searchable(text: $queryForSearchURL, placement: .navigationBarDrawer(displayMode: .always))
         .onChange(of: queryForSearchURL.lowercased()) { query in
             // search api call

@@ -58,7 +58,6 @@ struct TravellerTravelView: View {
                 // group
                 Group {
                     Image("shipxlogo")
-                        .padding(.top, 5)
                     Spacer()
                 } //: group
             } //: vstack
@@ -77,11 +76,11 @@ struct TravellerTravelView: View {
                         Text("Division:              ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(travellerTravelFormModel.divisionFrom)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -96,8 +95,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -108,11 +106,11 @@ struct TravellerTravelView: View {
                         Text("District:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.districtFrom)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -127,8 +125,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -139,11 +136,11 @@ struct TravellerTravelView: View {
                         Text("Upazila:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.upazilaFrom)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -158,8 +155,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -170,11 +166,11 @@ struct TravellerTravelView: View {
                         Text("City Corp. Area:")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.cityCorpAreaFrom)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -189,8 +185,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -218,11 +213,11 @@ struct TravellerTravelView: View {
                         Text("Division:              ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.divisionTo)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -237,8 +232,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -249,11 +243,11 @@ struct TravellerTravelView: View {
                         Text("District:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.districtTo)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -268,8 +262,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -280,11 +273,11 @@ struct TravellerTravelView: View {
                         Text("Upazila:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.upazilaTo)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -299,8 +292,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -311,11 +303,11 @@ struct TravellerTravelView: View {
                         Text("City Corp. Area:")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
-                            .padding(8)
+                            .padding(10)
                         
                         Text(self.travellerTravelFormModel.cityCorpAreaTo)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .padding(8)
+                            .padding(10)
                         
                         Spacer()
                         
@@ -330,8 +322,7 @@ struct TravellerTravelView: View {
                             } label: {
                                 Image(systemName: "arrow.right")
                             }
-                            .padding(8)
-                            .padding(.trailing, 10)
+                            .padding(10)
                         } //: nav link
                     } //: hstack
                     
@@ -378,6 +369,7 @@ struct TravellerTravelView: View {
             } //: button
             .padding(30)
         } //: vstack
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .alert(self.alertTitle, isPresented: $showingAlert) {
             Button("OK", role: .cancel) { }
@@ -385,6 +377,7 @@ struct TravellerTravelView: View {
             Text(responseMessage)
         }
     } //: view
+    
     
     // post traveller travel post API request
     func postTravellerTravelRequest() {

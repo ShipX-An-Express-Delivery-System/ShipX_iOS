@@ -9,71 +9,101 @@ import Foundation
 
 extension String {
 
-    // base URL
+    // base URL request
     private static let baseURLString = "http://192.168.0.225:8000/api/v1/"
     
-    // register url
+    // register url request
     static func registerURL() -> String {
         return baseURLString + "register"
     }
     
-    // register OTP
+    // register OTP request
     static func registerOTPURL() -> String {
         return baseURLString + "sendRegisterOTP"
     }
     
-    // login url
+    // login url request
     static func loginURL() -> String {
         return baseURLString + "login"
     }
     
-    // switch role
+    // switch role request
     static func switchRoleURL() -> String {
         return baseURLString + "switchRole"
     }
     
-    // refresh token
+    // refresh token request
     static func refreshTokenURL() -> String {
         return baseURLString + "refreshToken"
     }
     
-    // forgot password OTP
+    // forgot password OTP request
     static func forgotPasswordOTPURL() -> String {
         return baseURLString + "sendForgotPassOTP"
     }
     
-    // forgot password
+    // forgot password request
     static func forgotPasswordURL() -> String {
         return baseURLString + "forgotPass"
     }
     
-    // division
+    // division request
     static func divisionURL() -> String {
         return baseURLString + "divisions?divisionName="
     }
     
-    // district
+    // district request
     static func districtURL() -> String {
         return baseURLString + "districts?districtName="
     }
     
-    // upazila
+    // upazila request
     static func upazilaURL() -> String {
         return baseURLString + "upazilas?upazilaName="
     }
     
-    // city corp
+    // city corp request
     static func cityCorpURL() -> String {
         return baseURLString + "cityCorpAreas?area="
     }
     
-    // traveller travel post
+    // traveller travel post request
     static func travellerShippingRequestURL() -> String {
         return baseURLString + "travellerShippingRequest"
     }
     
-    // shipping process data
+    // shipping process data request
     static func shippingProcessDataURL() -> String {
         return baseURLString + "shippingProcessData?email="
+    }
+    
+    // accept request
+    static func acceptRequestURL() -> String {
+        return baseURLString + "acceptRequest"
+    }
+    
+    // reject request
+    static func rejectRequestURL() -> String {
+        return baseURLString + "rejectRequest"
+    }
+    
+    // user profile data request
+    static func userProfileDataRequestURL() -> String {
+        return baseURLString + "userProfileData?email="
+    }
+    
+    // details shipping process data for traveller request
+    static func shippingDetailsDataForTravellerURL() -> String {
+        return baseURLString + "detailsShippingData?email="
+    }
+    
+    // confirmation OTP request
+    static func confirmationOTPRequestURL() -> String {
+        return baseURLString + "sendConfirmationOTP"
+    }
+    
+    // delivered request
+    static func deliveredRequestURL() -> String {
+        return baseURLString + "deliveredRequestByTraveller"
     }
 }

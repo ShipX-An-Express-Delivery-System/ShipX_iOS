@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF172F542886C5480035FE5E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF172F532886C5480035FE5E /* ProfileView.swift */; };
+		FF172F562886C68E0035FE5E /* ProfileDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF172F552886C68E0035FE5E /* ProfileDataRequest.swift */; };
 		FF19ACB72884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACB62884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift */; };
 		FF19ACB92884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACB82884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift */; };
 		FF19ACBF2885478D00D37011 /* TravellerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACBE2885478D00D37011 /* TravellerDetailsView.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF172F532886C5480035FE5E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FF172F552886C68E0035FE5E /* ProfileDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataRequest.swift; sourceTree = "<group>"; };
 		FF19ACB62884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerAcceptRejectRequestModel.swift; sourceTree = "<group>"; };
 		FF19ACB82884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerAcceptRejectResponseModel.swift; sourceTree = "<group>"; };
 		FF19ACBE2885478D00D37011 /* TravellerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerDetailsView.swift; sourceTree = "<group>"; };
@@ -146,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF172F522886C52D0035FE5E /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				FF172F532886C5480035FE5E /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		FF19ACC028859CC600D37011 /* ProfileDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +243,7 @@
 				FF4D4B9528808A0D006D8B97 /* ReceiverViews */,
 				FF4D4B9628808A4D006D8B97 /* TravellerViews */,
 				FF4D4B9F2881BAD1006D8B97 /* LocationSearchView */,
+				FF172F522886C52D0035FE5E /* ProfileView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +268,7 @@
 			children = (
 				FF4D4B8828804A3E006D8B97 /* RefreshTokenHelper.swift */,
 				FF9AF56A288418FE0094541B /* ShippingProcessDataRequest.swift */,
+				FF172F552886C68E0035FE5E /* ProfileDataRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -528,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */,
+				FF172F542886C5480035FE5E /* ProfileView.swift in Sources */,
 				FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */,
 				FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */,
 				FF19ACC42885F7FB00D37011 /* ConfirmationOTPResponseModel.swift in Sources */,
@@ -549,6 +564,7 @@
 				FF4D4B6D2879F029006D8B97 /* ScreenSizes.swift in Sources */,
 				FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */,
 				FF4D4BA12881BAF8006D8B97 /* LocationSearchViewFrom.swift in Sources */,
+				FF172F562886C68E0035FE5E /* ProfileDataRequest.swift in Sources */,
 				FF4D4B9E2881A694006D8B97 /* TravellerTravelView.swift in Sources */,
 				FF19ACB92884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift in Sources */,
 				FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */,

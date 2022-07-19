@@ -75,7 +75,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("Division:              ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(travellerTravelFormModel.divisionFrom)
@@ -105,7 +105,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("District:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.districtFrom)
@@ -135,7 +135,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("Upazila:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.upazilaFrom)
@@ -165,7 +165,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("City Corp. Area:")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.cityCorpAreaFrom)
@@ -212,7 +212,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("Division:              ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.divisionTo)
@@ -242,7 +242,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("District:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.districtTo)
@@ -272,7 +272,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("Upazila:                ")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.upazilaTo)
@@ -302,7 +302,7 @@ struct TravellerTravelView: View {
                     HStack {
                         Text("City Corp. Area:")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(.customRed)
+                            //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.cityCorpAreaTo)

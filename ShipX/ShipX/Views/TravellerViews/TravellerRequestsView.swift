@@ -10,6 +10,10 @@ import Alamofire
 
 struct TravellerRequestsView: View {
     
+    init() {
+        UITableView.appearance().showsVerticalScrollIndicator = false
+    }
+    
     @State var shippingProcessData: [ShippingProcessData]?
     
     @State private var shippingProcessId = String()

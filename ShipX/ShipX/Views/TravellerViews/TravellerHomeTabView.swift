@@ -35,7 +35,7 @@ struct TravellerHomeTabView: View {
                         Label("Details", systemImage: "newspaper")
                     }
                     .tag(3)
-                Text("Profile")
+                ProfileView()
                     .tabItem {
                         Label("Profile", systemImage: "person.fill")
                     }

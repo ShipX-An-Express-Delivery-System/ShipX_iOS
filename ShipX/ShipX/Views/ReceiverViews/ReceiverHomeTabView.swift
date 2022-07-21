@@ -21,11 +21,14 @@ struct ReceiverHomeTabView: View {
                         Label("Shipping Details", systemImage: "note.text")
                     }
                     .tag(1)
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                    .tag(2)
+                ScrollView(showsIndicators: false) {
+                    ProfileView()
+                }
+                .clipped()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                }
+                .tag(2)
             } // tab view
             .accentColor(.customRed)
         } //: navigation view

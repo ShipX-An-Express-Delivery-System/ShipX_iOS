@@ -35,11 +35,14 @@ struct TravellerHomeTabView: View {
                         Label("Details", systemImage: "newspaper")
                     }
                     .tag(3)
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                    .tag(4)
+                ScrollView(showsIndicators: false) {
+                    ProfileView()
+                }
+                .clipped()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                }
+                .tag(4)
             } // tab view
             .accentColor(.customRed)
         } //: navigation view

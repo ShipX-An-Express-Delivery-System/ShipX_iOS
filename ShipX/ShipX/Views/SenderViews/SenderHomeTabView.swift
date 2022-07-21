@@ -30,11 +30,14 @@ struct SenderHomeTabView: View {
                         Label("Shipping Details", systemImage: "note.text")
                     }
                     .tag(2)
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.fill")
-                    }
-                    .tag(3)
+                ScrollView(showsIndicators: false) {
+                    ProfileView()
+                }
+                .clipped()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                }
+                .tag(3)
             } // tab view
             .accentColor(.customRed)
         } //: navigation view

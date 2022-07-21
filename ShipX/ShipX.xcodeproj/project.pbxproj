@@ -63,6 +63,8 @@
 		FF9BEF2E2889AA84004E2500 /* SenderShippingRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF2D2889AA84004E2500 /* SenderShippingRequestModel.swift */; };
 		FF9BEF302889AAC9004E2500 /* SenderShippingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF2F2889AAC9004E2500 /* SenderShippingResponseModel.swift */; };
 		FF9BEF322889AEE3004E2500 /* ShippingCostResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF312889AEE3004E2500 /* ShippingCostResponseModel.swift */; };
+		FF9BEF342889E75A004E2500 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF332889E75A004E2500 /* ImagePicker.swift */; };
+		FF9BEF362889ECA9004E2500 /* ImageUploadResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF352889ECA9004E2500 /* ImageUploadResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		FF9BEF2D2889AA84004E2500 /* SenderShippingRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderShippingRequestModel.swift; sourceTree = "<group>"; };
 		FF9BEF2F2889AAC9004E2500 /* SenderShippingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderShippingResponseModel.swift; sourceTree = "<group>"; };
 		FF9BEF312889AEE3004E2500 /* ShippingCostResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingCostResponseModel.swift; sourceTree = "<group>"; };
+		FF9BEF332889E75A004E2500 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FF9BEF352889ECA9004E2500 /* ImageUploadResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				FF19ACC128859CD800D37011 /* ProfileDataResponseModel.swift */,
+				FF9BEF352889ECA9004E2500 /* ImageUploadResponseModel.swift */,
 			);
 			path = ProfileDataModel;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				FF4D4B662879EBD6006D8B97 /* AppColors.swift */,
 				FF4D4B6C2879F029006D8B97 /* ScreenSizes.swift */,
 				FF9AF561288324480094541B /* Extensions.swift */,
+				FF9BEF332889E75A004E2500 /* ImagePicker.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeTabView.swift in Sources */,
 				FF172F542886C5480035FE5E /* ProfileView.swift in Sources */,
 				FF2163B12888508B00FA6605 /* FindTravellersView.swift in Sources */,
+				FF9BEF342889E75A004E2500 /* ImagePicker.swift in Sources */,
 				FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */,
 				FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */,
 				FF19ACC42885F7FB00D37011 /* ConfirmationOTPResponseModel.swift in Sources */,
@@ -611,6 +618,7 @@
 				FF9BEF322889AEE3004E2500 /* ShippingCostResponseModel.swift in Sources */,
 				FF2163BE2888AE4F00FA6605 /* AvailableTravellersResponseDataModel.swift in Sources */,
 				FF9AF562288324480094541B /* Extensions.swift in Sources */,
+				FF9BEF362889ECA9004E2500 /* ImageUploadResponseModel.swift in Sources */,
 				FF19ACB72884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift in Sources */,
 				FF9BEF2E2889AA84004E2500 /* SenderShippingRequestModel.swift in Sources */,
 				FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */,

@@ -142,8 +142,6 @@ struct TravellerRequestsView: View {
                                 print("Accept Button Pressed")
                                 self.shippingProcessId = data.id ?? ""
                                 postAcceptRequest()
-                                self.shippingProcessData?.removeAll()
-                                getShippingProcess()
                             } label: {
                                 Text("Accept")
                                     .frame(width: UIScreen.screenWidth / 3, height: 50, alignment: .center)
@@ -162,8 +160,6 @@ struct TravellerRequestsView: View {
                                 print("Reject Button Pressed")
                                 self.shippingProcessId = data.id ?? ""
                                 postRejectRequest()
-                                self.shippingProcessData?.removeAll()
-                                getShippingProcess()
                             } label: {
                                 Text("Reject")
                                     .frame(width: UIScreen.screenWidth / 3, height: 50, alignment: .center)
@@ -181,6 +177,7 @@ struct TravellerRequestsView: View {
         } //: vstact
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
         .onAppear {
             getShippingProcess()
         }
@@ -222,6 +219,9 @@ struct TravellerRequestsView: View {
                 self.alertTitle = "Server Request Success!"
                 self.responseMessage = data.value?.status ?? "Accepted"
                 self.showingAlert = true
+                
+                self.shippingProcessData?.removeAll()
+                getShippingProcess()
             }
             else {
                 print("Accept Failed")
@@ -253,6 +253,9 @@ struct TravellerRequestsView: View {
                 self.alertTitle = "Server Request Success!"
                 self.responseMessage = data.value?.status ?? "Rejected"
                 self.showingAlert = true
+                
+                self.shippingProcessData?.removeAll()
+                getShippingProcess()
             }
             else {
                 print("Reject Failed")

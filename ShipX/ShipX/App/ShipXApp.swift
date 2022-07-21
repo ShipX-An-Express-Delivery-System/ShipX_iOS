@@ -19,7 +19,7 @@ struct ShipXApp: App {
             }
             else {
                 if UserDefaults.standard.string(forKey: "role") == "sender" {
-                    SenderHomeView()
+                    SenderHomeTabView()
                         .onAppear {
                             refreshTokenRequest(completion: {
                                 print(UserDefaults.standard.string(forKey: "accessToken")!)
@@ -27,7 +27,7 @@ struct ShipXApp: App {
                         }
                 }
                 if UserDefaults.standard.string(forKey: "role") == "receiver" {
-                    ReceiverHomeView()
+                    ReceiverHomeTabView()
                         .onAppear {
                             refreshTokenRequest(completion: {
                                 print(UserDefaults.standard.string(forKey: "accessToken")!)

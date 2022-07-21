@@ -1,33 +1,29 @@
 //
-//  TravellerTravelView.swift
+//  FindTravellersView.swift
 //  ShipX
 //
-//  Created by Fahim Rahman on 15/7/22.
+//  Created by Fahim Rahman on 20/7/22.
 //
 
 import SwiftUI
-import Alamofire
 
-struct TravellerTravelView: View {
+struct FindTravellersView: View {
     
     @ObservedObject private var travellerTravelFormModel = TravellerTravelFormViewModel.shared
-    
-    @State private var showingAlert = false
-    @State private var responseMessage = String()
-    @State private var alertTitle = String()
     
     @State private var divisionFromButtonPressed = false
     @State private var districtFromButtonPressed = false
     @State private var upazilaFromButtonPressed = false
-    @State private var cityCorpAreaFromButtonPressed = false
     
     @State private var divisionToButtonPressed = false
     @State private var districtToButtonPressed = false
     @State private var upazilaToButtonPressed = false
-    @State private var cityCorpAreaToButtonPressed = false
+    
+    @State private var findTravellerButtonPressed = false
     
     @State var searchURL: String = String()
     @State var navigationTitle: String = String()
+    
     
     // view
     var body: some View {
@@ -49,7 +45,7 @@ struct TravellerTravelView: View {
                 Group {
                     // hstack
                     HStack(spacing: 0) {
-                        Text("I'm going to travel, From:")
+                        Text("Find Traveller, From:")
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                             .foregroundColor(.customRed)
                             .padding()
@@ -71,12 +67,12 @@ struct TravellerTravelView: View {
                     // hstack
                     HStack {
                         Text("Division:              ")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                        //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(travellerTravelFormModel.divisionFrom)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
                             .padding(10)
                         
                         Spacer()
@@ -101,12 +97,12 @@ struct TravellerTravelView: View {
                     // hstack
                     HStack {
                         Text("District:                ")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                        //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.districtFrom)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
                             .padding(10)
                         
                         Spacer()
@@ -131,12 +127,12 @@ struct TravellerTravelView: View {
                     // hstack
                     HStack {
                         Text("Upazila:                ")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                        //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.upazilaFrom)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
                             .padding(10)
                         
                         Spacer()
@@ -155,47 +151,8 @@ struct TravellerTravelView: View {
                             .padding(10)
                         } //: nav link
                     } //: hstack
-                    
                     Divider()
-                    
-                    // hstack
-                    HStack {
-                        Text("City Corp. Area:")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
-                            .padding(10)
-                        
-                        Text(self.travellerTravelFormModel.cityCorpAreaFrom)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            .padding(10)
-                        
-                        Spacer()
-                        
-                        // nav link
-                        NavigationLink(destination: LocationSearchViewFrom(navigationTitle: $navigationTitle, searchURL: $searchURL), isActive: $cityCorpAreaFromButtonPressed) {
-                            Button {
-                                // city corp area from action
-                                print("City Corp. Area From Button Pressed")
-                                self.navigationTitle = "Search City Corp. Area"
-                                self.searchURL = String.cityCorpURL()
-                                self.cityCorpAreaFromButtonPressed = true
-                            } label: {
-                                Image(systemName: "arrow.right")
-                            }
-                            .padding(10)
-                        } //: nav link
-                    } //: hstack
-                    
-                    Divider()
-                    
-                    // hstack
-                    HStack {
-                        TextField("Additional Note: ", text: $travellerTravelFormModel.additionalNoteFrom)
-                            .padding()
-                    } //: hstack
                 } //: group
-                
-                Divider()
                 
                 // group
                 Group {
@@ -207,12 +164,12 @@ struct TravellerTravelView: View {
                     // hstack
                     HStack {
                         Text("Division:              ")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                        //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.divisionTo)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
                             .padding(10)
                         
                         Spacer()
@@ -237,12 +194,12 @@ struct TravellerTravelView: View {
                     // hstack
                     HStack {
                         Text("District:                ")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                        //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.districtTo)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
                             .padding(10)
                         
                         Spacer()
@@ -267,12 +224,12 @@ struct TravellerTravelView: View {
                     // hstack
                     HStack {
                         Text("Upazila:                ")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                        //.foregroundColor(.customRed)
                             .padding(10)
                         
                         Text(self.travellerTravelFormModel.upazilaTo)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
                             .padding(10)
                         
                         Spacer()
@@ -293,123 +250,36 @@ struct TravellerTravelView: View {
                     } //: hstack
                     
                     Divider()
-                    
-                    // hstack
-                    HStack {
-                        Text("City Corp. Area:")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            //.foregroundColor(.customRed)
-                            .padding(10)
-                        
-                        Text(self.travellerTravelFormModel.cityCorpAreaTo)
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            .padding(10)
-                        
-                        Spacer()
-                        
-                        // nav link
-                        NavigationLink(destination: LocationSearchViewTo(navigationTitle: $navigationTitle, searchURL: $searchURL), isActive: $cityCorpAreaToButtonPressed) {
-                            Button {
-                                // upazila to action
-                                print("City Corp. Area To Button Pressed")
-                                self.navigationTitle = "Search City Corp. Area"
-                                self.searchURL = String.cityCorpURL()
-                                self.cityCorpAreaToButtonPressed = true
-                            } label: {
-                                Image(systemName: "arrow.right")
-                            }
-                            .padding(10)
-                        } //: nav link
-                    } //: hstack
-                    
-                    Divider()
-                    
-                    // hstack
-                    HStack {
-                        TextField("Additional Note: ", text: $travellerTravelFormModel.additionalNoteTo)
-                            .padding()
-                    } //: hstack
                 } //: group
-                Divider()
             } //: vstack
             
-            // group
-            Group {
-                // vstack
-                VStack {
-                    Text("Travelling Time and Date")
-                        .font(.system(size: 20, weight: .bold, design: .rounded))
-                        .foregroundColor(.customRed)
-                        .padding()
-                    
-                    DatePicker("", selection:$travellerTravelFormModel.travellingTimeAndDate, in: Date.now...)
-                        .environment(\.timeZone, TimeZone(secondsFromGMT: 0)!)
-                        .labelsHidden()
-                        .padding()
-                } //: vstack
-            } //: group
-            
-            // button
-            Button {
-                // action
-                print("Post Button Pressed")
-                postTravellerTravelRequest()
-            } label: {
-                Text("Post")
-                    .font(.system(size: 16, weight: .regular, design: .rounded))
-                    .foregroundColor(.white)
-                    .frame(width: UIScreen.screenWidth - 50, height: 50, alignment: .center)
-                    .background(Color.customRed)
-                    .cornerRadius(10)
-            } //: button
-            .padding(30)
+            // nav link
+            NavigationLink(destination: AvailableTravellersListView(), isActive: $findTravellerButtonPressed) {
+                // button
+                Button {
+                    // action
+                    print("Find Travellers Button Pressed")
+                    self.findTravellerButtonPressed = true
+                } label: {
+                    Text("Find Travellers")
+                        .font(.system(size: 16, weight: .regular, design: .rounded))
+                        .foregroundColor(.white)
+                        .frame(width: UIScreen.screenWidth - 50, height: 50, alignment: .center)
+                        .background(Color.customRed)
+                        .cornerRadius(10)
+                } //: button
+                .padding(30)
+            } //: nav link
         } //: vstack
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(true)
-        .alert(self.alertTitle, isPresented: $showingAlert) {
-            Button("OK", role: .cancel) { }
-        } message: {
-            Text(responseMessage)
-        }
     } //: view
-    
-    
-    // post traveller travel post API request
-    func postTravellerTravelRequest() {
-        
-        guard let travellerTravelURL = URL(string: String.travellerShippingRequestURL()) else {
-            print("Traveller Travel URL Invalid")
-            return
-        }
-        
-        let parameters = TravellerTravelRequestModel(travellingTimeAndDate: Date().dateToString(fromDate: travellerTravelFormModel.travellingTimeAndDate),
-                                                     isTravellerAvailable: true,
-                                                     travellerLocationFrom: TravellerLocation(division: travellerTravelFormModel.divisionFrom, district: travellerTravelFormModel.districtFrom, upazila: travellerTravelFormModel.upazilaFrom, cityCorpArea: travellerTravelFormModel.cityCorpAreaFrom, additionalLocationNote: travellerTravelFormModel.additionalNoteFrom), travellerLocationTo: TravellerLocation(division: travellerTravelFormModel.divisionTo, district: travellerTravelFormModel.districtTo, upazila: travellerTravelFormModel.upazilaTo, cityCorpArea: travellerTravelFormModel.cityCorpAreaTo, additionalLocationNote: travellerTravelFormModel.additionalNoteTo))
-        
-        let headers: HTTPHeaders = ["Authorization": "Bearer \(UserDefaults.standard.string(forKey: "accessToken") ?? "")", "Content-Type": "application/json"]
-        
-        let request = AF.request(travellerTravelURL, method: .post, parameters: parameters, encoder: .json, headers: headers)
-        
-        request.responseDecodable(of: TravellerTravelResponseModel.self) { data in
-            if data.value?.success == false {
-                self.alertTitle = "Server Request Error!"
-                self.responseMessage = data.value?.status ?? "Unknown Error"
-                self.showingAlert = true
-            }
-            else {
-                self.alertTitle = "Success!"
-                self.responseMessage = data.value?.status ?? "Travelling request placed successfully"
-                self.showingAlert = true
-            }
-        }
-    }
 }
 
 
-struct TravellerTravelView_Previews: PreviewProvider {
+struct FindTravellersView_Previews: PreviewProvider {
     static var previews: some View {
-        TravellerTravelView()
-            .previewLayout(.sizeThatFits)
+        FindTravellersView()
     }
 }

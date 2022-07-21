@@ -30,20 +30,6 @@ extension Date {
         // again convert your date to string
         return formatter.string(from: convertedStringDate!)
     }
-    
-//    func currentTimeMillis() -> Int {
-//        return Int(self.timeIntervalSince1970 * 1000)
-//    }
-//
-//    func getTimeDateFromTimeStamp(timeStamp : Int) -> String {
-//
-//        let date = NSDate(timeIntervalSince1970: TimeInterval(timeStamp / 1000))
-//
-//        let dayTimePeriodFormatter = DateFormatter()
-//        dayTimePeriodFormatter.dateFormat = "dd MMM YY, hh:mm a"
-//
-//        return dayTimePeriodFormatter.string(from: date as Date)
-//    }
 }
 
 

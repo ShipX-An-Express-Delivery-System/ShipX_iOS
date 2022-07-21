@@ -1,35 +1,35 @@
 //
-//  TravellerDetailsView.swift
+//  ShippingDetailsView.swift
 //  ShipX
 //
-//  Created by Fahim Rahman on 18/7/22.
+//  Created by Fahim Rahman on 20/7/22.
 //
 
 import SwiftUI
-import Alamofire
 
-struct TravellerDetailsView: View {
+struct ShippingDetailsView: View {
     
     @State private var shippingDetailsData: [ShippingProcessData]?
+    
     @State private var senderProfileData: ProfileDataResponseModel?
     @State private var receiverProfileData: ProfileDataResponseModel?
+    @State private var travellerProfileData: ProfileDataResponseModel?
     
-    @State private var deliveredOTP = String()
     @State private var hideViewBecauseOfNoData = true
     
     @State private var showingAlert = false
     @State private var responseMessage = String()
     @State private var alertTitle = String()
     
-    // view
     var body: some View {
+        
         // scroll view
         ScrollView(showsIndicators: false) {
             // group
             Group {
                 // vstack
                 VStack {
-                    Text("Accepted Request Details")
+                    Text("Shipping Details")
                         .foregroundColor(.customRed)
                         .font(.system(size: 18, weight: .bold, design: .rounded))
                         .padding(.bottom)
@@ -144,6 +144,60 @@ struct TravellerDetailsView: View {
                     .hidden(self.hideViewBecauseOfNoData)
                     
                     
+                    // traveller group
+                    Group {
+                        // hstack
+                        HStack {
+                            Text("Traveller Information")
+                                .foregroundColor(.customRed)
+                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                .padding()
+                            Spacer()
+                        } //: hstack
+                        
+                        Divider()
+                        
+                        // hstack
+                        HStack {
+                            // receiver image
+                            AsyncImage(url: URL(string: self.travellerProfileData?.profileData?.photo?.url ?? "")) { image in
+                                        image
+                                          .resizable()
+                                    } placeholder: {
+                                        ProgressView()
+                                            .progressViewStyle(.circular)
+                                    }
+                                    .frame(width: 60, height: 60, alignment: .center)
+                                    .clipShape(Circle())
+                                    .padding()
+                                    .padding(.leading, 10)
+                            
+                            Spacer()
+                            
+                            // vstack
+                            VStack(alignment: .trailing, spacing: 0) {
+                                Text(self.travellerProfileData?.profileData?.name ?? "")
+                                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                                    .padding(5)
+                                    .padding(.trailing, 10)
+                                
+                                Text(self.travellerProfileData?.profileData?.phone ?? "")
+                                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                                    .padding(5)
+                                    .padding(.trailing, 10)
+                                
+                                Text(self.shippingDetailsData?.first?.travellerEmail ?? "")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                                    .padding(5)
+                                    .padding(.trailing, 10)
+                            } //: vstack
+                        } //: hstack
+                        Divider()
+                    } //: traveller group
+                    .hidden(self.hideViewBecauseOfNoData)
+                    
+                    
                     // product info group
                     Group {
                         // hstack
@@ -242,49 +296,6 @@ struct TravellerDetailsView: View {
                     
                     Divider()
                     
-                    // send otp group
-                    Group {
-                        // hstack
-                        HStack(spacing: 0) {
-                            TextField("OTP from the receiver", text: $deliveredOTP)
-                                .padding()
-                            // send otp button
-                            Button {
-                                // action
-                                print("Send OTP Button Pressed")
-                                // send OTP
-                                postConfirmationOTPRequest()
-                            } label: {
-                                Text("Send OTP")
-                                    .foregroundColor(.white)
-                                    .frame(width: UIScreen.screenWidth / 3, height: 45, alignment: .center)
-                                    .background(Color.customRed)
-                                    .cornerRadius(10)
-                                    .padding()
-                            } //: button
-                        } //: hstack
-                    } //: send otp group
-                    .hidden(self.hideViewBecauseOfNoData)
-                    
-                    Divider()
-                    
-                    Button {
-                        // action
-                        print("Delivered Button Pressed")
-                        postDeliveredRequest(completion: { response, error in
-                            if error == nil && response?.success == true {
-                                getShippingDetailsData()
-                            }
-                        })
-                    } label: {
-                        Text("Delivered")
-                            .foregroundColor(.white)
-                            .frame(width: UIScreen.screenWidth - 50, height: 50, alignment: .center)
-                            .background(Color.customRed)
-                            .cornerRadius(10)
-                            .padding()
-                    }
-                    .hidden(self.hideViewBecauseOfNoData)
                 } //: vstack
             } //: group
             .alert(self.alertTitle, isPresented: $showingAlert) {
@@ -301,8 +312,7 @@ struct TravellerDetailsView: View {
         .navigationBarHidden(true)
         .tint(.black)
         .clipped()
-        
-    } //: view
+    }
     
     
     // get shipping details API request
@@ -324,6 +334,11 @@ struct TravellerDetailsView: View {
                     getProfileDataRequest(email: self.shippingDetailsData?.first?.receiverEmail ?? "", accessToken: UserDefaults.standard.string(forKey: "accessToken") ?? "") { (response, error) in
                         self.receiverProfileData = response
                     }
+                    
+                    // traveller
+                    getProfileDataRequest(email: self.shippingDetailsData?.first?.travellerEmail ?? "", accessToken: UserDefaults.standard.string(forKey: "accessToken") ?? "") { (response, error) in
+                        self.travellerProfileData = response
+                    }
                 }
                 else {
                     self.hideViewBecauseOfNoData = true
@@ -331,67 +346,11 @@ struct TravellerDetailsView: View {
             }
         })
     }
-    
-    
-    // post confirmation OTP request
-    func postConfirmationOTPRequest() {
-        
-        guard let confirmationOTPURL = URL(string: String.confirmationOTPRequestURL()) else {
-            print("Confirmation OTP URL Invalid")
-            return
-        }
-        
-        let parameters = ["shippingProcessId": self.shippingDetailsData?.first?.id]
-        
-        let request = AF.request(confirmationOTPURL, method: .post, parameters: parameters, encoder: .json)
-        
-        request.responseDecodable(of: ConfirmationOTPResponseModel.self) { data in
-            if data.value?.success == false {
-                self.alertTitle = "Server Request Error!"
-                self.responseMessage = data.value?.status ?? "Unknown Error"
-                self.showingAlert = true
-            }
-            else {
-                self.alertTitle = "Success!"
-                self.responseMessage = data.value?.status ?? "OTP Sent Successfully."
-                self.showingAlert = true
-            }
-        }
-    }
-    
-    // post delivered request
-    func postDeliveredRequest(completion: @escaping (DeliveredRequestModel?, Error?) -> ()) {
-        
-        guard let deliveredRequestURL = URL(string: String.deliveredRequestURL()) else {
-            print("Delivered Request URL Invalid")
-            return
-        }
-        
-        let parameters = ["shippingProcessId": self.shippingDetailsData?.first?.id, "confirmationOTP": self.deliveredOTP]
-        
-        let headers: HTTPHeaders = ["Authorization": "Bearer \(UserDefaults.standard.string(forKey: "accessToken") ?? "")", "Content-Type": "application/json"]
-        
-        let request = AF.request(deliveredRequestURL, method: .post, parameters: parameters, encoder: .json, headers: headers)
-        
-        request.responseDecodable(of: DeliveredRequestModel.self) { data in
-            if data.value?.success == false {
-                self.alertTitle = "Server Request Error!"
-                self.responseMessage = data.value?.status ?? "Unknown Error"
-                self.showingAlert = true
-            }
-            else {
-                self.alertTitle = "Success!"
-                self.responseMessage = data.value?.status ?? "Successfully Delivered"
-                self.showingAlert = true
-                completion(data.value, data.error)
-            }
-        }
-    }
 }
 
 
-struct TravellerDetailsView_Previews: PreviewProvider {
+struct ShippingDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        TravellerDetailsView()
+        ShippingDetailsView()
     }
 }

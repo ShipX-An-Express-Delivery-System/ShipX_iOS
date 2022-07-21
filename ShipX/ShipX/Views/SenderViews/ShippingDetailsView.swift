@@ -223,6 +223,7 @@ struct ShippingDetailsView: View {
                                 
                                 Text(self.shippingDetailsData?.first?.shippingStatus ?? "")
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
+                                    .foregroundColor(.customRed)
                                     .padding(.horizontal)
                             } //: hstack
                             // hstack
@@ -235,6 +236,7 @@ struct ShippingDetailsView: View {
                                 
                                 Text(self.shippingDetailsData?.first?.isPaid ?? false ? "Paid" : "Pending")
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
+                                    .foregroundColor(.customRed)
                                     .padding(.horizontal)
                             } //: hstack
                             // hstack

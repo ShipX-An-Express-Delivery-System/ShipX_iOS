@@ -307,7 +307,7 @@ struct TravellerDetailsView: View {
     
     // get shipping details API request
     func getShippingDetailsData() {
-        getShippingProcessRequest(email: UserDefaults.standard.string(forKey: "email") ?? "", accessToken: UserDefaults.standard.string(forKey: "accessToken") ?? "", URLString: String.shippingProcessDataURL(), completion: { (response, error) in
+        getShippingProcessRequest(email: UserDefaults.standard.string(forKey: "email") ?? "", accessToken: UserDefaults.standard.string(forKey: "accessToken") ?? "", URLString: String.shippingDetailsDataForTravellerURL(), completion: { (response, error) in
             
             if error == nil && response?.success == true {
                 self.shippingDetailsData = response?.shippingProcessData

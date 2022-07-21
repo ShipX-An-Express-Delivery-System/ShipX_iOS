@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Alamofire
+import PhotosUI
 
 struct ProfileView: View {
     
@@ -18,6 +19,9 @@ struct ProfileView: View {
     @State private var showingAlert = false
     @State private var responseMessage = String()
     @State private var alertTitle = String()
+    
+    @State private var inputImage: UIImage?
+    @State private var showImagePicker = false
     
     // view
     var body: some View {
@@ -43,6 +47,10 @@ struct ProfileView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipShape(Circle())
                 .padding()
+                .onTapGesture {
+                    print("Tapped On Photo")
+                    self.showImagePicker = true
+                }
             } //: group
             
             Divider()
@@ -152,6 +160,10 @@ struct ProfileView: View {
                 }
             }
         }
+        .onChange(of: inputImage) { _ in uploadImage(uploadImageURL: String.uploadProfilePictureURL()) }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: $inputImage)
+        }
         .alert(self.alertTitle, isPresented: $showingAlert) {
             Button("OK", role: .cancel) { }
         } message: {
@@ -181,6 +193,31 @@ struct ProfileView: View {
             else {
                 print("Logged Out")
                 self.isLoggedIn = false
+            }
+        }
+    }
+    
+    
+    // upload image
+    func uploadImage(uploadImageURL: String) {
+        
+        guard let inputImage = inputImage else { return }
+        
+        let imageData = inputImage.jpegData(compressionQuality: 1)
+        
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(UserDefaults.standard.string(forKey: "accessToken") ?? "")", "Content-Type": "multipart/form-data"]
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imageData!, withName: "image", fileName: "file.jpeg", mimeType: "image/jpeg")
+        }, to: uploadImageURL, method: .post, headers: headers)
+        .responseDecodable(of: ImageUploadResponseModel.self) { response in
+            if response.value?.success == true {
+                // get profile data
+                getProfileDataRequest(email: UserDefaults.standard.string(forKey: "email") ?? "", accessToken: UserDefaults.standard.string(forKey: "accessToken") ?? "") { response, error in
+                    if error == nil && response?.success == true {
+                        self.myProfileData = response
+                    }
+                }
             }
         }
     }

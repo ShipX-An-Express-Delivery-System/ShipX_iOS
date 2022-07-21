@@ -8,102 +8,127 @@
 import Foundation
 
 extension String {
-
-    // base URL request
+    
+    // base URL request - Count 1
     private static let baseURLString = "http://192.168.0.225:8000/api/v1/"
     
-    // register url request
+    // register url request - Count 2
     static func registerURL() -> String {
         return baseURLString + "register"
     }
     
-    // register OTP request
+    // register OTP request - Count 3
     static func registerOTPURL() -> String {
         return baseURLString + "sendRegisterOTP"
     }
     
-    // login url request
+    // login url request - Count 4
     static func loginURL() -> String {
         return baseURLString + "login"
     }
     
-    // switch role request
+    // logout request - Count 5
+    static func logoutRequestURL() -> String {
+        return baseURLString + "logout"
+    }
+    
+    // switch role request - Count 6
     static func switchRoleURL() -> String {
         return baseURLString + "switchRole"
     }
     
-    // refresh token request
+    // refresh token request - Count 7
     static func refreshTokenURL() -> String {
         return baseURLString + "refreshToken"
     }
     
-    // forgot password OTP request
+    // forgot password OTP request - Count 8
     static func forgotPasswordOTPURL() -> String {
         return baseURLString + "sendForgotPassOTP"
     }
     
-    // forgot password request
+    // forgot password request - Count 9
     static func forgotPasswordURL() -> String {
         return baseURLString + "forgotPass"
     }
     
-    // division request
+    // division request - Count 10
     static func divisionURL() -> String {
         return baseURLString + "divisions?divisionName="
     }
     
-    // district request
+    // district request - Count 11
     static func districtURL() -> String {
         return baseURLString + "districts?districtName="
     }
     
-    // upazila request
+    // upazila request - Count 12
     static func upazilaURL() -> String {
         return baseURLString + "upazilas?upazilaName="
     }
     
-    // city corp request
+    // city corp request - Count 13
     static func cityCorpURL() -> String {
         return baseURLString + "cityCorpAreas?area="
     }
     
-    // traveller travel post request
+    // traveller travel post request - Count 14
     static func travellerShippingRequestURL() -> String {
         return baseURLString + "travellerShippingRequest"
     }
     
-    // shipping process data request
+    // shipping process data request - Count 15
     static func shippingProcessDataURL() -> String {
         return baseURLString + "shippingProcessData?email="
     }
     
-    // accept request
+    // accept request - Count 16
     static func acceptRequestURL() -> String {
         return baseURLString + "acceptRequest"
     }
     
-    // reject request
+    // reject request - Count 17
     static func rejectRequestURL() -> String {
         return baseURLString + "rejectRequest"
     }
     
-    // user profile data request
+    // user profile data request - Count 18
     static func userProfileDataRequestURL() -> String {
         return baseURLString + "userProfileData?email="
     }
     
-    // details shipping process data for traveller request
+    // details shipping process data for traveller request - Count 19
     static func shippingDetailsDataForTravellerURL() -> String {
         return baseURLString + "detailsShippingData?email="
     }
     
-    // confirmation OTP request
+    // confirmation OTP request - Count 20
     static func confirmationOTPRequestURL() -> String {
         return baseURLString + "sendConfirmationOTP"
     }
     
-    // delivered request
+    // delivered request - Count 21
     static func deliveredRequestURL() -> String {
         return baseURLString + "deliveredRequestByTraveller"
+    }
+    
+    // find travellers request - Count 22
+    static func findTravellersURL(divisionFrom: String, districtFrom: String, upazilaFrom: String?, divisionTo: String, districtTo: String, upazilaTo: String?) -> String {
+        return baseURLString + "availableTravellers?divisionFrom=\(divisionFrom)&districtFrom=\(districtFrom)" + (upazilaFrom ?? "") + "&divisionTo=\(divisionTo)&districtTo=\(districtTo)" + (upazilaTo ?? "")
+    }
+    
+    // sender shipping request - Count 23
+    static func senderShippingRequestURL() -> String {
+        return baseURLString + "senderShippingRequest"
+    }
+    
+    // get shipping cost - Count 24
+    static func shippingCostURL() -> String {
+        return baseURLString + "shippingCost"
+    }
+    
+    // upload profile picture - Count 25
+    static func uploadProfilePictureURL() -> String {
+        return baseURLString + "profilePicture"
     }
 }

@@ -14,7 +14,7 @@ import Alamofire
 func getShippingProcessRequest(email: String, accessToken: String, URLString: String, completion: @escaping (ShippingProcessResponseModel?, Error?) -> ()) {
     
     guard let shippingProcessURL = URL(string: URLString + email) else {
-        print("Location URL Invalid")
+        print("Shipping Process URL Invalid")
         return
     }
     

@@ -15,6 +15,12 @@
 		FF19ACC228859CD800D37011 /* ProfileDataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACC128859CD800D37011 /* ProfileDataResponseModel.swift */; };
 		FF19ACC42885F7FB00D37011 /* ConfirmationOTPResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACC32885F7FB00D37011 /* ConfirmationOTPResponseModel.swift */; };
 		FF19ACC9288606FD00D37011 /* DeliveredRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF19ACC8288606FD00D37011 /* DeliveredRequestModel.swift */; };
+		FF2163B12888508B00FA6605 /* FindTravellersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2163B02888508B00FA6605 /* FindTravellersView.swift */; };
+		FF2163B3288851B600FA6605 /* ShippingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2163B2288851B600FA6605 /* ShippingDetailsView.swift */; };
+		FF2163B6288859CE00FA6605 /* LogoutResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2163B5288859CE00FA6605 /* LogoutResponseModel.swift */; };
+		FF2163B82888A22600FA6605 /* AvailableTravellersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2163B72888A22600FA6605 /* AvailableTravellersListView.swift */; };
+		FF2163BB2888A40300FA6605 /* TravellerTravelFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2163BA2888A40300FA6605 /* TravellerTravelFormViewModel.swift */; };
+		FF2163BE2888AE4F00FA6605 /* AvailableTravellersResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2163BD2888AE4F00FA6605 /* AvailableTravellersResponseDataModel.swift */; };
 		FF4D4B322879E514006D8B97 /* ShipXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B312879E514006D8B97 /* ShipXApp.swift */; };
 		FF4D4B362879E517006D8B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4D4B352879E517006D8B97 /* Assets.xcassets */; };
 		FF4D4B392879E517006D8B97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4D4B382879E517006D8B97 /* Preview Assets.xcassets */; };
@@ -40,8 +46,8 @@
 		FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8D28807A9A006D8B97 /* ForgotPasswordRequestModel.swift */; };
 		FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B8F28807AA6006D8B97 /* ForgotPasswordResponseModel.swift */; };
 		FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */; };
-		FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */; };
-		FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */; };
+		FF4D4B9828808A80006D8B97 /* SenderHomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9728808A80006D8B97 /* SenderHomeTabView.swift */; };
+		FF4D4B9A28808A9F006D8B97 /* ReceiverHomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9928808A9F006D8B97 /* ReceiverHomeTabView.swift */; };
 		FF4D4B9C28808ACC006D8B97 /* TravellerHomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9B28808ACC006D8B97 /* TravellerHomeTabView.swift */; };
 		FF4D4B9E2881A694006D8B97 /* TravellerTravelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4B9D2881A694006D8B97 /* TravellerTravelView.swift */; };
 		FF4D4BA12881BAF8006D8B97 /* LocationSearchViewFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D4BA02881BAF8006D8B97 /* LocationSearchViewFrom.swift */; };
@@ -53,6 +59,10 @@
 		FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF5662883F8020094541B /* ShippingProcessResponseModel.swift */; };
 		FF9AF5692883F8C50094541B /* TravellerRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF5682883F8C50094541B /* TravellerRequestsView.swift */; };
 		FF9AF56B288418FE0094541B /* ShippingProcessDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9AF56A288418FE0094541B /* ShippingProcessDataRequest.swift */; };
+		FF9BEF2C28898192004E2500 /* SenderRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF2B28898192004E2500 /* SenderRequestView.swift */; };
+		FF9BEF2E2889AA84004E2500 /* SenderShippingRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF2D2889AA84004E2500 /* SenderShippingRequestModel.swift */; };
+		FF9BEF302889AAC9004E2500 /* SenderShippingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF2F2889AAC9004E2500 /* SenderShippingResponseModel.swift */; };
+		FF9BEF322889AEE3004E2500 /* ShippingCostResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BEF312889AEE3004E2500 /* ShippingCostResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +91,12 @@
 		FF19ACC128859CD800D37011 /* ProfileDataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataResponseModel.swift; sourceTree = "<group>"; };
 		FF19ACC32885F7FB00D37011 /* ConfirmationOTPResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationOTPResponseModel.swift; sourceTree = "<group>"; };
 		FF19ACC8288606FD00D37011 /* DeliveredRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveredRequestModel.swift; sourceTree = "<group>"; };
+		FF2163B02888508B00FA6605 /* FindTravellersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTravellersView.swift; sourceTree = "<group>"; };
+		FF2163B2288851B600FA6605 /* ShippingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingDetailsView.swift; sourceTree = "<group>"; };
+		FF2163B5288859CE00FA6605 /* LogoutResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseModel.swift; sourceTree = "<group>"; };
+		FF2163B72888A22600FA6605 /* AvailableTravellersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTravellersListView.swift; sourceTree = "<group>"; };
+		FF2163BA2888A40300FA6605 /* TravellerTravelFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTravelFormViewModel.swift; sourceTree = "<group>"; };
+		FF2163BD2888AE4F00FA6605 /* AvailableTravellersResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTravellersResponseDataModel.swift; sourceTree = "<group>"; };
 		FF4D4B2E2879E513006D8B97 /* ShipX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4D4B312879E514006D8B97 /* ShipXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipXApp.swift; sourceTree = "<group>"; };
 		FF4D4B352879E517006D8B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,8 +125,8 @@
 		FF4D4B8D28807A9A006D8B97 /* ForgotPasswordRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRequestModel.swift; sourceTree = "<group>"; };
 		FF4D4B8F28807AA6006D8B97 /* ForgotPasswordResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponseModel.swift; sourceTree = "<group>"; };
 		FF4D4B912880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordOTPResponseModel.swift; sourceTree = "<group>"; };
-		FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderHomeView.swift; sourceTree = "<group>"; };
-		FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverHomeView.swift; sourceTree = "<group>"; };
+		FF4D4B9728808A80006D8B97 /* SenderHomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderHomeTabView.swift; sourceTree = "<group>"; };
+		FF4D4B9928808A9F006D8B97 /* ReceiverHomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverHomeTabView.swift; sourceTree = "<group>"; };
 		FF4D4B9B28808ACC006D8B97 /* TravellerHomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerHomeTabView.swift; sourceTree = "<group>"; };
 		FF4D4B9D2881A694006D8B97 /* TravellerTravelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerTravelView.swift; sourceTree = "<group>"; };
 		FF4D4BA02881BAF8006D8B97 /* LocationSearchViewFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewFrom.swift; sourceTree = "<group>"; };
@@ -122,6 +138,10 @@
 		FF9AF5662883F8020094541B /* ShippingProcessResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingProcessResponseModel.swift; sourceTree = "<group>"; };
 		FF9AF5682883F8C50094541B /* TravellerRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerRequestsView.swift; sourceTree = "<group>"; };
 		FF9AF56A288418FE0094541B /* ShippingProcessDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingProcessDataRequest.swift; sourceTree = "<group>"; };
+		FF9BEF2B28898192004E2500 /* SenderRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderRequestView.swift; sourceTree = "<group>"; };
+		FF9BEF2D2889AA84004E2500 /* SenderShippingRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderShippingRequestModel.swift; sourceTree = "<group>"; };
+		FF9BEF2F2889AAC9004E2500 /* SenderShippingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderShippingResponseModel.swift; sourceTree = "<group>"; };
+		FF9BEF312889AEE3004E2500 /* ShippingCostResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingCostResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +186,32 @@
 			path = ProfileDataModel;
 			sourceTree = "<group>";
 		};
+		FF2163B4288859B700FA6605 /* LogoutModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF2163B5288859CE00FA6605 /* LogoutResponseModel.swift */,
+			);
+			path = LogoutModel;
+			sourceTree = "<group>";
+		};
+		FF2163B92888A3C500FA6605 /* ObservableSingletonClass */ = {
+			isa = PBXGroup;
+			children = (
+				FF2163BA2888A40300FA6605 /* TravellerTravelFormViewModel.swift */,
+			);
+			path = ObservableSingletonClass;
+			sourceTree = "<group>";
+		};
+		FF2163BC2888AE2400FA6605 /* SenderModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF2163BD2888AE4F00FA6605 /* AvailableTravellersResponseDataModel.swift */,
+				FF9BEF2D2889AA84004E2500 /* SenderShippingRequestModel.swift */,
+				FF9BEF2F2889AAC9004E2500 /* SenderShippingResponseModel.swift */,
+			);
+			path = SenderModel;
+			sourceTree = "<group>";
+		};
 		FF4D4B252879E513006D8B97 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +239,7 @@
 				FF4D4B5D2879E769006D8B97 /* App */,
 				FF4D4B5E2879E77E006D8B97 /* Views */,
 				FF4D4B5F2879E783006D8B97 /* Models */,
+				FF2163B92888A3C500FA6605 /* ObservableSingletonClass */,
 				FF4D4B602879E794006D8B97 /* Network */,
 				FF4D4B612879E7A2006D8B97 /* Helper */,
 				FF4D4B622879E7B6006D8B97 /* URLs */,
@@ -254,10 +301,12 @@
 				FF19ACC028859CC600D37011 /* ProfileDataModel */,
 				FF4D4B72287DA438006D8B97 /* RegisterModel */,
 				FF4D4B7E28802CD5006D8B97 /* LoginModel */,
+				FF2163B4288859B700FA6605 /* LogoutModel */,
 				FF4D4B832880459B006D8B97 /* SwitchRoleModel */,
 				FF4D4B8C28807A7B006D8B97 /* ForgotPasswordModel */,
-				FF4D4BA228820014006D8B97 /* Location Model */,
+				FF4D4BA228820014006D8B97 /* LocationModel */,
 				FF4D4BA72882B54D006D8B97 /* TravellerModel */,
+				FF2163BC2888AE2400FA6605 /* SenderModel */,
 				FF9AF5632883F7C20094541B /* ShippingProcessModel */,
 			);
 			path = Models;
@@ -343,7 +392,11 @@
 		FF4D4B94288089F7006D8B97 /* SenderViews */ = {
 			isa = PBXGroup;
 			children = (
-				FF4D4B9728808A80006D8B97 /* SenderHomeView.swift */,
+				FF4D4B9728808A80006D8B97 /* SenderHomeTabView.swift */,
+				FF2163B02888508B00FA6605 /* FindTravellersView.swift */,
+				FF2163B72888A22600FA6605 /* AvailableTravellersListView.swift */,
+				FF9BEF2B28898192004E2500 /* SenderRequestView.swift */,
+				FF2163B2288851B600FA6605 /* ShippingDetailsView.swift */,
 			);
 			path = SenderViews;
 			sourceTree = "<group>";
@@ -351,7 +404,7 @@
 		FF4D4B9528808A0D006D8B97 /* ReceiverViews */ = {
 			isa = PBXGroup;
 			children = (
-				FF4D4B9928808A9F006D8B97 /* ReceiverHomeView.swift */,
+				FF4D4B9928808A9F006D8B97 /* ReceiverHomeTabView.swift */,
 			);
 			path = ReceiverViews;
 			sourceTree = "<group>";
@@ -376,12 +429,12 @@
 			path = LocationSearchView;
 			sourceTree = "<group>";
 		};
-		FF4D4BA228820014006D8B97 /* Location Model */ = {
+		FF4D4BA228820014006D8B97 /* LocationModel */ = {
 			isa = PBXGroup;
 			children = (
 				FF4D4BA328820030006D8B97 /* LocationModel.swift */,
 			);
-			path = "Location Model";
+			path = LocationModel;
 			sourceTree = "<group>";
 		};
 		FF4D4BA72882B54D006D8B97 /* TravellerModel */ = {
@@ -401,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				FF9AF5662883F8020094541B /* ShippingProcessResponseModel.swift */,
+				FF9BEF312889AEE3004E2500 /* ShippingCostResponseModel.swift */,
 			);
 			path = ShippingProcessModel;
 			sourceTree = "<group>";
@@ -541,8 +595,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeView.swift in Sources */,
+				FF4D4B9A28808A9F006D8B97 /* ReceiverHomeTabView.swift in Sources */,
 				FF172F542886C5480035FE5E /* ProfileView.swift in Sources */,
+				FF2163B12888508B00FA6605 /* FindTravellersView.swift in Sources */,
 				FF4D4B8928804A3E006D8B97 /* RefreshTokenHelper.swift in Sources */,
 				FF9AF5672883F8020094541B /* ShippingProcessResponseModel.swift in Sources */,
 				FF19ACC42885F7FB00D37011 /* ConfirmationOTPResponseModel.swift in Sources */,
@@ -553,8 +608,11 @@
 				FF4D4B672879EBD6006D8B97 /* AppColors.swift in Sources */,
 				FF4D4B71287A0025006D8B97 /* LoginView.swift in Sources */,
 				FF19ACC228859CD800D37011 /* ProfileDataResponseModel.swift in Sources */,
+				FF9BEF322889AEE3004E2500 /* ShippingCostResponseModel.swift in Sources */,
+				FF2163BE2888AE4F00FA6605 /* AvailableTravellersResponseDataModel.swift in Sources */,
 				FF9AF562288324480094541B /* Extensions.swift in Sources */,
 				FF19ACB72884BC6200D37011 /* TravellerAcceptRejectRequestModel.swift in Sources */,
+				FF9BEF2E2889AA84004E2500 /* SenderShippingRequestModel.swift in Sources */,
 				FF4D4B8E28807A9A006D8B97 /* ForgotPasswordRequestModel.swift in Sources */,
 				FF4D4BA92882B561006D8B97 /* TravellerTravelRequestModel.swift in Sources */,
 				FF4D4B87288045E5006D8B97 /* SwitchRoleRequestModel.swift in Sources */,
@@ -562,23 +620,29 @@
 				FF4D4B9C28808ACC006D8B97 /* TravellerHomeTabView.swift in Sources */,
 				FF4D4B652879EB56006D8B97 /* URLs.swift in Sources */,
 				FF4D4B6D2879F029006D8B97 /* ScreenSizes.swift in Sources */,
+				FF9BEF302889AAC9004E2500 /* SenderShippingResponseModel.swift in Sources */,
 				FF4D4B922880845C006D8B97 /* ForgotPasswordOTPResponseModel.swift in Sources */,
 				FF4D4BA12881BAF8006D8B97 /* LocationSearchViewFrom.swift in Sources */,
 				FF172F562886C68E0035FE5E /* ProfileDataRequest.swift in Sources */,
+				FF2163B3288851B600FA6605 /* ShippingDetailsView.swift in Sources */,
 				FF4D4B9E2881A694006D8B97 /* TravellerTravelView.swift in Sources */,
 				FF19ACB92884BC7400D37011 /* TravellerAcceptRejectResponseModel.swift in Sources */,
+				FF2163B82888A22600FA6605 /* AvailableTravellersListView.swift in Sources */,
 				FF4D4B9028807AA6006D8B97 /* ForgotPasswordResponseModel.swift in Sources */,
 				FF4D4BA62882955B006D8B97 /* LocationSearchViewTo.swift in Sources */,
 				FF9AF56B288418FE0094541B /* ShippingProcessDataRequest.swift in Sources */,
+				FF2163B6288859CE00FA6605 /* LogoutResponseModel.swift in Sources */,
 				FF4D4B7B287DF5BF006D8B97 /* RegisterOTPResponseModel.swift in Sources */,
+				FF2163BB2888A40300FA6605 /* TravellerTravelFormViewModel.swift in Sources */,
 				FF4D4B74287DA72F006D8B97 /* RegisterRequestModel.swift in Sources */,
 				FF4D4BA428820030006D8B97 /* LocationModel.swift in Sources */,
 				FF19ACC9288606FD00D37011 /* DeliveredRequestModel.swift in Sources */,
 				FF4D4B8028802CEE006D8B97 /* LoginRequestModel.swift in Sources */,
 				FF4D4B6F287A0011006D8B97 /* RegisterView.swift in Sources */,
-				FF4D4B9828808A80006D8B97 /* SenderHomeView.swift in Sources */,
+				FF4D4B9828808A80006D8B97 /* SenderHomeTabView.swift in Sources */,
 				FF4D4B322879E514006D8B97 /* ShipXApp.swift in Sources */,
 				FF4D4B6B2879ECB3006D8B97 /* LoginRegisterSelectionView.swift in Sources */,
+				FF9BEF2C28898192004E2500 /* SenderRequestView.swift in Sources */,
 				FF9AF5692883F8C50094541B /* TravellerRequestsView.swift in Sources */,
 				FF4D4B85288045D7006D8B97 /* SwitchRoleResponseModel.swift in Sources */,
 			);

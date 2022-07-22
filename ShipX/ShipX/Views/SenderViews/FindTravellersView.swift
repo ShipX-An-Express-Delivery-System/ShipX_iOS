@@ -239,7 +239,7 @@ struct FindTravellersView: View {
                             Button {
                                 // upazila to action
                                 print("Upazila To Button Pressed")
-                                self.navigationTitle = "Search District"
+                                self.navigationTitle = "Search Upazila"
                                 self.searchURL = String.upazilaURL()
                                 self.upazilaToButtonPressed = true
                             } label: {

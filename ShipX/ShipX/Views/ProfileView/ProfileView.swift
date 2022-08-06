@@ -23,6 +23,8 @@ struct ProfileView: View {
     @State private var inputImage: UIImage?
     @State private var showImagePicker = false
     
+    @State private var totalEarned = ((Int.random(in: 60...100) * 15) / 100)
+    
     // view
     var body: some View {
         // vstack
@@ -108,7 +110,7 @@ struct ProfileView: View {
                     
                     Spacer()
                     
-                    Text("7654 BDT")
+                    Text("\(totalEarned) BDT")
                         .font(.system(size: 16, weight: .semibold, design: .rounded))
                         .padding()
                 }
@@ -159,6 +161,8 @@ struct ProfileView: View {
                     self.myProfileData = response
                 }
             }
+            // demo price increase
+            self.totalEarned += Int.random(in: 20...40)
         }
         .onChange(of: inputImage) { _ in uploadImage(uploadImageURL: String.uploadProfilePictureURL()) }
         .sheet(isPresented: $showImagePicker) {

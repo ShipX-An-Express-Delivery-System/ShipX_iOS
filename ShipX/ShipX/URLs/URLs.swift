@@ -10,10 +10,11 @@ import Foundation
 extension String {
     
     // base URL request local - Count 1
-    //private static let baseURLString = "http://192.168.0.225:8000/api/v1/"
+    private static let baseURLString = "http://192.168.0.225:8000/api/v1/"
+    //private static let baseURLString = "http://192.168.8.101:8000/api/v1/"
     
     // base URL request HEROKU - Count 1
-    private static let baseURLString = "https://shipxbackend.herokuapp.com/api/v1/"
+    //private static let baseURLString = "https://shipxbackend.herokuapp.com/api/v1/"
     
     // register url request - Count 2
     static func registerURL() -> String {
